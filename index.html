@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мои достижения</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Arial; }
+
+    /* секция: vw + vh, контрастный фон */
+    .achievements {
+      width: 100vw; min-height: 100vh;
+      background: #2b7cff;
+      padding: 40px 20px;
+      display: flex; justify-content: center; align-items: center;
+    }
+
+    /* внутренний контейнер 1140–1440px */
+    .inner { width: 100%; max-width: 1200px; }
+
+    h2 {
+      color: #fff; text-align: center;
+      font-size: 36px; margin-bottom: 40px;
+    }
+
+    /* карточки: flex-ряд */
+    .cards {
+      display: flex; flex-wrap: wrap; gap: 30px;
+      justify-content: center;
+    }
+
+    /* карточка */
+    .card {
+      flex: 1 1 300px; max-width: 340px;
+      background: #fff; border-radius: 12px;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%; height: 180px;
+      object-fit: cover; background: #e0e0e0;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex; flex-direction: column; flex: 1;
+    }
+
+    .card h3 {
+      font-size: 20px; text-align: center;
+      margin-bottom: 12px; color: #222;
+    }
+
+    .card p {
+      font-size: 14px; line-height: 1.5;
+      text-align: center; color: #555; flex: 1;
+    }
+
+    .card button {
+      margin: 18px auto 0;
+      padding: 10px 24px;
+      background: #2b7cff; color: #fff;
+      border: none; border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* мобильная версия — column */
+    @media (max-width: 768px) {
+      .cards { flex-direction: column; align-items: center; }
+      .card { width: 100%; max-width: 400px; }
+      h2 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="achievements">
+    <div class="inner">
+      <h2>Мои достижения</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <img src="https://placehold.co/600x400/eeeeee/2b7cff?text=Достижение+1" alt="Достижение">
+          <div class="card-body">
+            <h3>Вкусно покушала с утра</h3>
+            <p>Вкусный бутерброд утром - залог хорошего дня.</p>
+            <button>Подробнее</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://placehold.co/600x400/eeeeee/2b7cff?text=Достижение+2" alt="Достижение">
+          <div class="card-body">
+            <h3>Выполнила Web-дизайн</h3>
+            <p>Иногда выполнить лабораторную в срок- достижение.</p>
+            <button>Подробнее</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <img src="https://placehold.co/600x400/eeeeee/2b7cff?text=Достижение+3" alt="Достижение">
+          <div class="card-body">
+            <h3>Не опоздала на первую пару</h3>
+            <p>Благодаря вкусному бутерброду, появилась мотивация прийти вовремя.</p>
+            <button>Подробнее</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
